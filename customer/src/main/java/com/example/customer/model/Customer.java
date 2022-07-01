@@ -1,10 +1,8 @@
 package com.example.customer.model;
 
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Getter
@@ -12,6 +10,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Builder
+@EqualsAndHashCode
 @AllArgsConstructor
 public class Customer {
 
@@ -23,17 +22,4 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String email;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Customer customer = (Customer) o;
-        return id != null && Objects.equals(id, customer.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
 }
