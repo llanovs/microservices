@@ -1,6 +1,6 @@
 package com.example.fraud.api;
 
-import com.example.fraud.model.FraudCheckResponse;
+import com.example.clients.model.FraudCheckResponse;
 import com.example.fraud.service.FraudCheckService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

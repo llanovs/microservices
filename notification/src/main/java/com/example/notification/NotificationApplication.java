@@ -1,4 +1,4 @@
-package com.example.fraud;
+package com.example.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,14 +7,14 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
 @EnableEurekaClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = { "com.example.notification", "com.example.amqp" })
 @PropertySources({
 		@PropertySource("classpath:application-default.yml")
 })
-public class FraudApplication {
+public class NotificationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FraudApplication.class, args);
+		SpringApplication.run(NotificationApplication.class, args);
 	}
 
 }
