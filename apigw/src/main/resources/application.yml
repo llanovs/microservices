@@ -14,6 +14,17 @@ spring:
           uri: lb://CUSTOMER
           predicates:
             - Path=/api/v1/customers/**
+  boot:
+    admin:
+      client:
+        url: http://localhost:9080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
 
 eureka:
   client:

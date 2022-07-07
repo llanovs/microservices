@@ -17,10 +17,21 @@ spring:
       hibernate:
         ddl-auto: update
       show-sql: true
-    zipkin:
-      base-url: http://localhost:9411
-    rabbitmq:
-      address: localhost:5672
+  zipkin:
+    base-url: http://localhost:9411
+  rabbitmq:
+    address: localhost:5672
+  boot:
+    admin:
+      client:
+        url: http://localhost:9080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
 
 eureka:
   client:
