@@ -30,6 +30,13 @@ management:
         include: "*"
     health:
       show-details: always
+
+logging:
+  file:
+    name: fraud.log
+    max-history: 5
+    max-size: 10MB
+
 eureka:
   client:
     service-url:

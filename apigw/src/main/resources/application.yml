@@ -18,6 +18,12 @@ spring:
     admin:
       client:
         url: http://localhost:9080
+logging:
+  file:
+    name: apigw.log
+    max-history: 5
+    max-size: 10MB
+
 management:
   endpoints:
     web:
